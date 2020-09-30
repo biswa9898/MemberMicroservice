@@ -11,7 +11,7 @@ namespace membermicroservice.Repository
 {
     public class memberclaimrepo : Imemberclaimrepo
     {
-        Uri baseAddress = new Uri("https://localhost:44393/api/claim"); //claim  
+        Uri baseAddress = new Uri("http://20.193.144.71/api/claim"); //claim  
         HttpClient client;
         public memberclaimrepo()
         {

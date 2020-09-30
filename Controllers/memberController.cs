@@ -22,7 +22,7 @@ namespace membermicroservice.Controllers
     {
         Imemberclaimrepo repo;
         readonly log4net.ILog _log4net;
-        Uri baseAddress = new Uri("https://localhost:44393/api"); //claim  
+        Uri baseAddress = new Uri("http://20.193.144.71/api"); //claim  
         HttpClient client;
         public memberController(Imemberclaimrepo _rep)
         {
@@ -84,7 +84,7 @@ namespace membermicroservice.Controllers
         {
             _log4net.Info("MemberController Submit Claim Action Method is called!");
            
-            if (repo.submitClaim(obj) == "success")
+            if (string.Equals(repo.submitClaim(obj) , "success"))
                 return Ok("success");
             return BadRequest("failure");
         }
